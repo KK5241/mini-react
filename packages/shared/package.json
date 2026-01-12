@@ -1,0 +1,12 @@
+{
+  "name": "@mini-react/shared",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./index.ts",
+  "private": true,
+  "keywords": [],
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.27.0"
+}
