@@ -35,6 +35,8 @@ export const jsx = (type: ElementType, config: any, ...maybeChildren: any[]): Re
       ref = config.ref;
     }
 
+    console.log('config', config, maybeChildren.length);
+
     // 2. 提取剩余的属性到 props 上
     for (const prop in config) {
       if (prop !== 'key' && prop !== 'ref' && Object.prototype.hasOwnProperty.call(config, prop)) {
@@ -43,19 +45,19 @@ export const jsx = (type: ElementType, config: any, ...maybeChildren: any[]): Re
     }
   }
 
-  const maybeChildrenLength = maybeChildren.length;
+  // const maybeChildrenLength = maybeChildren.length;
 
-  if (maybeChildrenLength) {
-    if (maybeChildrenLength === 1) {
-      props.children = maybeChildren[0];
-    } else {
-      props.children = maybeChildren;
-    }
-  }
+  // if (maybeChildrenLength) {
+  //   if (maybeChildrenLength === 1) {
+  //     props.children = maybeChildren[0];
+  //   } else {
+  //     props.children = maybeChildren;
+  //   }
+  // }
 
   return ReactElement(type, key, ref, props);
 };
 
-export const jsxDev = jsx;
+export const jsxDEV = jsx;
 
 export { ReactElement };

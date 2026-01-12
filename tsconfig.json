@@ -7,9 +7,15 @@
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
+    "module": "ESNext",
     "target": "esnext",
-    "types": [],
+    "types": ["node"],
+    "paths": {
+      // 这里的配置决定了你引入时的写法
+      "@mini-react/shared/*": ["./packages/shared/*"]
+    },
+    // 将解析策略改为 Bundler (适合 Vite/Rollup 构建的项目)
+    "moduleResolution": "Bundler",
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
@@ -39,6 +45,6 @@
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
-    "skipLibCheck": true 
+    "skipLibCheck": true
   }
 }
