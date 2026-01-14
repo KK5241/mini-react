@@ -1,0 +1,14 @@
+{
+  "name": "react-reconciler",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "module": "index.ts",
+  "dependencies": {
+    "@mini-react/shared": "workspace:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.27.0"
+}
