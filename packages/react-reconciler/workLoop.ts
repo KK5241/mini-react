@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable no-constant-condition */
 import beginWork from './beginWork';
 import completeWork from './completeWork';
 import type { FiberNode } from './fiber';
@@ -8,7 +10,7 @@ function prepareFreshStack(root: FiberNode) {
   nextUnitOfWork = root;
 }
 
-export function renderRoot(root) {
+export function renderRoot(root: any) {
   // 初始化工作
   prepareFreshStack(root);
 
@@ -37,7 +39,7 @@ function performUnitOfWork(fiber: FiberNode) {
   if (next === null) {
     completeUnitOfWork(fiber);
   } else {
-    nextUnitOfWork = next;
+    nextUnitOfWork = next as unknown as FiberNode;
   }
 }
 

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Key, Props } from '@mini-react/shared/ReactTypes';
 import type { WorkTag } from './workTags';
 import { NoFlags, type Flags } from './fiberFlags';
